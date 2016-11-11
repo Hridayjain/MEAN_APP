@@ -1,6 +1,6 @@
 var routerApp = angular.module('routerApp', ['ui.router']);
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
+routerApp.config(function($stateProvider, $urlRouterProvider,Templates) {
     
     $urlRouterProvider.otherwise('/user');
     
@@ -14,12 +14,12 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('dahshboard', {
             url: '/dahshboard',
-            templateUrl: 'partial-home.html'
+            templateUrl: Templates.DASHBOARD_HTML,            
         })
 
         .state('user', {
             url: '/user',
-            templateUrl: '/assets/components/user/view/List.html',
+            templateUrl: Templates.USER_LIST_HTML,
         })
 
         .state('meeting', {

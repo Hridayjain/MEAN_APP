@@ -6,8 +6,10 @@
   <link rel="shortcut icon" type="image/x-icon" href="assets/images/mean.png" />
   <link rel="stylesheet" type="text/css" href="./bower_components/angular-material/angular-material.min.css">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/app/app.css"> </head>
+  <link rel="stylesheet" type="text/css" href="./assets/css/app/app.css"> 
   <link rel="stylesheet" type="text/css" href="./assets/css/lib/angular/material-design-iconic-font.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);" rel='stylesheet' type='text/css'>
+</head>
 
 <body layout="row" ng-controller="AppCtrl">
   <md-sidenav layout="column" class="md-sidenav-left"
@@ -16,32 +18,19 @@
         md-whiteframe="4">
   <md-toolbar layout="row" class="md-theme-indigo md-hue-2">
   </md-toolbar>
-  <div layout="row">
     <md-list>
-      <md-item ng-repeat="item in menuList">
-        <a>
-          <md-item-content md-ink-ripple layout="row" layout-align="start center">
-            <div class="inset">
-              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-            </div>
-            <div class="inset">{{item.title}} </div>
-          </md-item-content>
-        </a>
-      </md-item>
-      <md-divider></md-divider>
-      <md-subheader>Management</md-subheader>
-      <md-item ng-repeat="item in adminMenuList">
-        <a>
-          <md-item-content md-ink-ripple layout="row" layout-align="start center">
-            <div class="inset">
-              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-            </div>
-            <div class="inset">{{item.title}} </div>
-          </md-item-content>
-        </a>
-      </md-item>
+        <md-list-item class="md-3-line" ui-sref="{{menu.link}}" ng-repeat="menu in menuList">
+          <div class="md-list-item-text" layout="column">
+            <span><i ng-class="menu.icon"></i>{{menu.title}}</span>
+          </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+        <md-list-item class="md-3-line" ui-sref="{{menu.link}}" ng-repeat="menu in adminMenuList">
+          <div layout="column">
+            <span><i ng-class="menu.icon"></i>{{menu.title}}</span>
+          </div>
+        </md-list-item>
     </md-list>
-  </div>
   </md-sidenav>
   <div layout="column" class="relative" layout-fill role="main">
     <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
@@ -162,9 +151,10 @@
   <script type="text/javascript" src="./bower_components/angular-material/angular-material.min.js"></script>
   <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="assets/js/lib/angular-leaflet-directive.js"></script>
-  <script type="text/javascript" src="assets/js/app/application.js"></script>
-  <script type="text/javascript" src="assets/js/app/app.route.js"></script>
-  <script type="text/javascript" src="assets/js/app/app.menu.js"></script>
+  <script type="text/javascript" src="/assets/js/app/application.js"></script>
+  <script type="text/javascript" src="/assets/js/app/Templates.js"></script>
+  <script type="text/javascript" src="/assets/js/app/app.route.js"></script>
+  <script type="text/javascript" src="/assets/js/app/app.menu.js"></script>
 </body>
 
 </html>

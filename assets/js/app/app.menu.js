@@ -3,29 +3,29 @@
       {
         link : 'dashboard',
         title: 'Dashboard',
-        icon: 'dashboard'
+        icon: 'zmdi zmdi-view-dashboard'
       },
       {
         link : 'user',
         title: 'Friends',
-        icon: 'group'
+        icon: 'zmdi zmdi-view-dashboard'
       },
       {
         link : 'meeting',
         title: 'Messages',
-        icon: 'message'
+        icon: 'zmdi zmdi-view-dashboard'
       }
     ];
     var adminMenu = [
       {
         link : 'user',
-        title: 'Trash',
-        icon: 'delete'
+        title: 'User Management',
+        icon: 'zmdi zmdi-accounts-list'
       },
       {
-        link : 'sheduleMeeting',
-        title: 'Settings',
-        icon: 'settings'
+        link : 'calendar',
+        title: 'Calendar',
+        icon: 'zmdi zmdi-calendar-note'
       }
     ];
 
